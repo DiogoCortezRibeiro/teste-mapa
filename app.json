@@ -3,6 +3,15 @@
     "name": "mapa",
     "slug": "mapa",
     "version": "1.0.0",
+    "plugins": [
+      [
+        "@rnmapbox/maps",
+        {
+          "RNMapboxMapsImpl": "mapbox",
+          "RNMapboxMapsDownloadToken": "sk.ey...qg"
+        }
+      ]
+    ],
     "assetBundlePatterns": [
       "**/*"
     ]
