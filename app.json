@@ -8,7 +8,7 @@
         "@rnmapbox/maps",
         {
           "RNMapboxMapsImpl": "mapbox",
-          "RNMapboxMapsDownloadToken": "sk.ey...qg"
+          "RNMapboxMapsDownloadToken": "pk.eyJ1IjoiZGlvbmVzYW50b3MiLCJhIjoiY2w4OWUwaWE2MDY2dDNycGRlMnNsbDNsZyJ9.FnBNs4QpS3HigVQ3Cmk3aw"
         }
       ]
     ],
