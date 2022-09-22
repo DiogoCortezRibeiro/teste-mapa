@@ -15,3 +15,24 @@ if (settings.hasProperty("newArchEnabled") && settings.newArchEnabled == "true")
   include(":ReactAndroid:hermes-engine")
   project(":ReactAndroid:hermes-engine").projectDir = new File(["node", "--print", "require.resolve('react-native/package.json')"].execute(null, rootDir).text.trim(), "../ReactAndroid/hermes-engine");
 }
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+          url 'https://api.mapbox.com/downloads/v2/releases/maven'
+          authentication {
+            basic(BasicAuthentication)
+          }
+          credentials {
+            // Do not change the username below.
+            // This should always be `mapbox` (not your username).
+            username = "mapbox"
+            // Use the secret token you stored in gradle.properties as the password
+            password = "sk.eyJ1IjoiZGlvbmVzYW50b3MiLCJhIjoiY2w4YmtweXd6MDB0azNvbzY0djIxOHE4MCJ9.cya8mWbgXr3kE6F9F91o_Q"
+          }
+        }
+    }
+}

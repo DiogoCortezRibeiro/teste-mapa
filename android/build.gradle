@@ -34,9 +34,16 @@ buildscript {
         classpath('com.android.tools.build:gradle:7.1.1')
         classpath('com.facebook.react:react-native-gradle-plugin')
         classpath('de.undercouch:gradle-download-task:5.0.1')
+        implementation 'com.mapbox.maps:android:10.8.0'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
+}
+
+android {
+  defaultConfig {
+      minSdkVersion 21
+  }
 }
 
 allprojects {
@@ -60,7 +67,7 @@ allprojects {
                 // This should always be `mapbox` (not your username).
                 username = 'mapbox'
                 // Use the secret token you stored in gradle.properties as the password
-                password = project.properties['MAPBOX_DOWNLOADS_TOKEN'] ?: ""
+                password = project.properties['MAPBOX_DOWNLOADS_TOKEN'] ? "sk.eyJ1IjoiZGlvbmVzYW50b3MiLCJhIjoiY2w4YmtweXd6MDB0azNvbzY0djIxOHE4MCJ9.cya8mWbgXr3kE6F9F91o_Q": ""
             }
         }
 
